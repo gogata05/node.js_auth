@@ -15,17 +15,11 @@ import swaggerRouter from './utils/swagger.js';
 const router = Router();
 
 // Assign controllers to subroutes
-// router.use('/test', testController);
 router.use('/auth', authController);
 router.use('/chat', chatController);
-// router.use('/stt', sttController);
 router.use('/tts', ttsController);
-// router.use('/ocr', ocrController);
 router.use('/audio', (req, res, next) => dynamicAudioRouter(req, res, next));
 router.use('/files', fileController);
-// router.use('/tts-and-stt', ttsSttController);
-// router.use('/openai-tts-and-google-stt', openaiTtsGoogleSttController);
-// router.use('/google-stt', googleSttController);
 router.use('/email', emailController);
 router.use('/reader', readerController);
 
