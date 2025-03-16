@@ -61,13 +61,6 @@ const userSchema = new mongoose.Schema(
       maxLength: [1024, 'Password reset token cannot be more than 1024 characters!'],
     },
     passwordResetExpires: Date,
-    city: {
-      type: String,
-      // minLength: [2, 'City must be at least 2 characters!'],
-      maxLength: [50, 'City cannot be more than 50 characters!'],
-      trim: true,
-      required: false,
-    },
     years: {
       type: String,
       required: false,
@@ -87,41 +80,12 @@ const userSchema = new mongoose.Schema(
       default: 'parent',
       required: [true, 'Role is required!'],
     },
-    parent: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
-      default: null,
-    },
-    kids: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-      },
-    ],
-    class: {
-      type: String,
-      required: false,
-      trim: true,
-      maxLength: [50, 'Class field cannot be more than 50 characters!'],
-    },
     files: [
       {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'File',
       },
     ],
-    dailyTarget: {
-      type: Number,
-      default: 1,
-      min: [1, 'Daily target should be at least 1.'],
-      max: [20, 'Daily target should be no more than 20.'],
-    },
-    weeklyTarget: {
-      type: Number,
-      default: 5,
-      min: [1, 'Weekly target should be at least 1.'],
-      max: [100, 'Weekly target should be no more than 100.'],
-    },
     lastActive: {
       type: Date,
       default: Date.now,
