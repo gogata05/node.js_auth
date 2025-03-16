@@ -1,0 +1,29 @@
+# Node.js dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Coverage reports (if using test coverage tools like Jest)
+coverage/
+
+# Cache and build files
+.cache/
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.bak
+
+# Miscellaneous
+*.seed
+*.orig
+
+# Google Application Credentials
+googleCloud.json

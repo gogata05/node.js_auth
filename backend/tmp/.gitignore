@@ -1,0 +1,6 @@
+# The tmp folder is used to temporary store voice audio files. Those files are automatically deleted upon processing.
+
+# Ignore everything in this directory
+*
+# But do not ignore this .gitignore file
+!.gitignore
